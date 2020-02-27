@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text, Animated, Easing, TextInput, TouchableOpacity } from 'react-native';
-import Styles from '../../CommonPart/Style/Styles';
+import Styles from '../../../CommonPart/Style/Styles';
 import { connect } from 'react-redux';
 import {addChangeColor} from '../actions'
 class TopView extends Component {

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text} from 'react-native';
-import Styles from '../../CommonPart/Style/Styles';
+import Styles from '../../../CommonPart/Style/Styles';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 

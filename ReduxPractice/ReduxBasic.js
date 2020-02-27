@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, TouchableHighlight ,NavigatorIOS, FlatList, TouchableWithoutFeedback } from 'react-native';
 import Styles from '../CommonPart/Style/Styles';
 import ReduxOne from  './ReduxOne/ReduxOne';
-
+import ReduxTwo from  './ReduxTwo/ReduxTwo';
 
 export default class ReduxBasic extends Component {
   render() {
@@ -11,7 +11,7 @@ export default class ReduxBasic extends Component {
       <View style={Styles.container}>
          <FlatList 
         style = {Styles.flatListStyle}
-        data={[{ key: '0-基本用法' }]}
+        data={[{ key: '0-日历' },{ key: '1-Button' }]}
         renderItem={this._renderFlatListItem}
         ItemSeparatorComponent = {() => (<View style={Styles.separator}></View>)}
 
@@ -36,10 +36,10 @@ export default class ReduxBasic extends Component {
     // console.log(index)
      if(index==0){
          this.testZeroMethod();
+     }else if(index ==1){
+        this.testOneMethod();
      }
-    //  }else if(index ==1){
-    //     this.testOneMethod();
-    //  }else if(index ==2){
+     //else if(index ==2){
     //     this.testTwoMethod();
     //  }else if(index ==3){
     //     this.testThreeMethod();
@@ -54,13 +54,14 @@ export default class ReduxBasic extends Component {
       });
     
   }
-  /*
+ 
   testOneMethod= ()=>{
     this.props.navigator.push({
-        component: AnimationModal,
-        title:'1-弹框动画'
+        component: ReduxTwo,
+        title:'2-进阶用法'
       });
   }
+   /*
   testTwoMethod = (data)=>{
     this.props.navigator.push({
       component: OrderDetailDispalyBar,
