@@ -22,8 +22,8 @@ class ReduxOne extends Component {
      //使用Provider组件包裹 Group组件, store作为属性传入Provider
         return (
             <View style={[Styles.container, { marginTop: 100 }]}>
-                {/* <TopView></TopView>
-                <BottomView></BottomView> */}
+                <TopView></TopView>
+                <BottomView></BottomView>
             </View>
         );
     }

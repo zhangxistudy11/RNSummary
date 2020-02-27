@@ -18,9 +18,12 @@ import ReduxBasic from './ReduxPractice/ReduxBasic'
 import ThirdStudyBasic from './ThirdLibStudy/ThirdStudyBasic'
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-import rootReducer from './ReduxPractice/ReduxOne/reducers/chageColor';
+import ReducerOne from './ReduxPractice/ReduxOne/reducers/chageColor';
+import ReducerTwo from './ReduxPractice/ReduxTwo/reducers';
+
 const store = createStore(
-  rootReducer
+  ReducerOne,
+  ReducerTwo
   //添加中间件
 );
 
