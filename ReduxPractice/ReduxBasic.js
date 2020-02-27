@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, TouchableHighlight ,NavigatorIOS, FlatList, TouchableWithoutFeedback } from 'react-native';
 import Styles from '../CommonPart/Style/Styles';
-import ReduxOne from  './ReduxOne';
+import ReduxOne from  './ReduxOne/ReduxOne';
 
 
 export default class ReduxBasic extends Component {

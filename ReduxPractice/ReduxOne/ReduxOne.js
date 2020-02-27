@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { View, Text, Animated, Easing, TextInput, TouchableOpacity } from 'react-native';
-import Styles from '../CommonPart/Style/Styles';
-import TopView from './Component/TopView';
-import BottomView from './Component/BottomView';
+import Styles from '../../CommonPart/Style/Styles';
+import TopView from 'Component/TopView';
+import BottomView from 'Component/BottomView';
 import { createStore } from 'redux';
-import rootReducer from './reducers/chageColor';
+import rootReducer from 'reducers/chageColor';
 import { Provider } from 'react-redux'
 
 const store = createStore(
