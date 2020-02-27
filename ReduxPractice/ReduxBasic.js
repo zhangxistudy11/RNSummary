@@ -11,7 +11,7 @@ export default class ReduxBasic extends Component {
       <View style={Styles.container}>
          <FlatList 
         style = {Styles.flatListStyle}
-        data={[{ key: '0-日历' },{ key: '1-Button' }]}
+        data={[{ key: '0-Redux初步' },{ key: '1-Redux进阶' }]}
         renderItem={this._renderFlatListItem}
         ItemSeparatorComponent = {() => (<View style={Styles.separator}></View>)}
 
