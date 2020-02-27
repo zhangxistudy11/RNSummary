@@ -3,11 +3,21 @@ import { View, Text, TouchableHighlight ,NavigatorIOS, FlatList, TouchableWithou
 import Styles from '../CommonPart/Style/Styles';
 import ReduxOne from  './ReduxOne/ReduxOne';
 import ReduxTwo from  './ReduxTwo/ReduxTwo';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import rootReducer from './ReduxOne/reducers/chageColor';
+const store = createStore(
+  rootReducer
+  //添加中间件
+);
+
+
 
 export default class ReduxBasic extends Component {
   render() {
     return (
-     
+      <Provider store={store}>
+
       <View style={Styles.container}>
          <FlatList 
         style = {Styles.flatListStyle}
@@ -17,6 +27,8 @@ export default class ReduxBasic extends Component {
 
       />
       </View>
+      </Provider>
+
     );
   }
 
