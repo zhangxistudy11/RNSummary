@@ -17,9 +17,7 @@ node_modules/
 *.zip
 dist/
 .DS_Store
-/.vscode
 /**/.babelrc
-/**/package-lock.json
 /**/eslint-report.html
 /**/out/
 npm-debug.log

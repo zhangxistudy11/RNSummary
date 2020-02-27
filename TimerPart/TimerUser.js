@@ -58,7 +58,7 @@ export default class TimerUser extends React.Component {
     }
     startUserTimer (){
         // if(!this.timer||(this.timer == 'undefined'))
-        // {
+        // {ffffff
             this.timer = setTimeout(() => {
                 console.log('计时器执行' + new Date())
             }, 5000);

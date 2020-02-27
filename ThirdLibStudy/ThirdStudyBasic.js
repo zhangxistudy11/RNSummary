@@ -44,7 +44,7 @@ export default class ThirdStudyBasic extends Component {
     //  }else if(index ==3){
     //     this.testThreeMethod();
     //  }else if(index ==4){
-    //     this.testFourMethod();aaaaaa
+    //     this.testFourMethod();
     //  }
   }
   testZeroMethod= ()=>{
