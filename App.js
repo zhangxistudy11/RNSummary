@@ -16,6 +16,13 @@ import AsyncBasicGrammar from './AsyncFile/AsyncBasicGrammar'
 import AnimationBasic from './Animation/AnimationBasic'
 import ReduxBasic from './ReduxPractice/ReduxBasic'
 import ThirdStudyBasic from './ThirdLibStudy/ThirdStudyBasic'
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import rootReducer from './ReduxPractice/ReduxOne/reducers/chageColor';
+const store = createStore(
+  rootReducer
+  //添加中间件
+);
 
 const {
 	width,height
@@ -31,6 +38,8 @@ const instructions = Platform.select({
 export default class App extends Component{
   render() {
     return (
+      <Provider store={store}>
+
        <NavigatorIOS
         initialRoute={{
           component: AppConment,
@@ -38,7 +47,8 @@ export default class App extends Component{
         }}
         style={{flex: 1}}
       />
-        
+            </Provider>
+  
     );
   }
 
