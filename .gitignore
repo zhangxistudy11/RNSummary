@@ -9,6 +9,22 @@ xcuserdata/
 *.xcscmblueprint
 *.xccheckout
 
+
+node_modules/
+.__tmp/
+.idea/
+*.map
+*.zip
+dist/
+.DS_Store
+/.vscode
+/**/.babelrc
+/**/package-lock.json
+/**/eslint-report.html
+/**/out/
+npm-debug.log
+tmp/
+
 ## compatibility with Xcode 3 and earlier (ignoring not required starting Xcode 4)
 build/
 DerivedData/
