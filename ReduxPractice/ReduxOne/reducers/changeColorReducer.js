@@ -5,7 +5,7 @@ import  {
 //tip3:根据类型，将上一层传来数值往下分发
 //tip:3 Reducer 是一个函数，它接受 Action 和当前 State 作为参数，返回一个新的 State。
 
-const changeColor = (state={},action) =>{
+const changeColor = (state={backColor:'#222222'},action) =>{
     const {type,backColor} = action;
     
     switch(type){

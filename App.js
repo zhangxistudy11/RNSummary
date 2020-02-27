@@ -17,15 +17,15 @@ import AnimationBasic from './Animation/AnimationBasic'
 import ReduxBasic from './ReduxPractice/ReduxBasic'
 import ThirdStudyBasic from './ThirdLibStudy/ThirdStudyBasic'
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
-import ReducerOne from './ReduxPractice/ReduxOne/reducers/chageColor';
-import ReducerTwo from './ReduxPractice/ReduxTwo/reducers';
+import store from './ReduxPractice/store'
+// import ReducerOne from './ReduxPractice/ReduxOne/reducers/chageColor';
+// import ReducerTwo from './ReduxPractice/ReduxTwo/reducers';
 
-const store = createStore(
-  ReducerOne,
-  ReducerTwo
-  //添加中间件
-);
+// const store = createStore(
+//   ReducerOne,
+//   ReducerTwo
+//   //添加中间件
+// );
 
 const {
 	width,height

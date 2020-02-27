@@ -38,5 +38,6 @@ const mapStateToProps = (state) => {
       backColor: state.backColor
     }
  }
+ 
 
  export default connect(mapStateToProps)(BottomView);
