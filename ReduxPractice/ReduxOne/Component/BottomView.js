@@ -10,9 +10,7 @@ class BottomView extends Component {
         super(props);
 
     }
-    static propTypes = {
-        backColor: PropTypes.string
-      }
+   
     componentDidMount() {
         // this.runAmimationThree();
     }
@@ -34,10 +32,14 @@ class BottomView extends Component {
  
 }
 const mapStateToProps = (state) => {
+    const {changeColorReducer:{backColor}} = state;
     return {
-      backColor: state.backColor
+      backColor: backColor
     }
  }
- 
 
- export default connect(mapStateToProps)(BottomView);
+//  const mapStateToProps = (state) => ({
+//     backColor: state.backColor,
+// });
+
+ export default connect(mapStateToProps,null)(BottomView);

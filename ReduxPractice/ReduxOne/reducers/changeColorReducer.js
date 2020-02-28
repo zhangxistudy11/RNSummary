@@ -10,6 +10,7 @@ const changeColor = (state={backColor:'#222222'},action) =>{
     
     switch(type){
         case CHANGE_COLOR:
+            // return backColor;
             return{
                 ...state,backColor:backColor
             }

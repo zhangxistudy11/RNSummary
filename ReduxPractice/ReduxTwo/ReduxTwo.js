@@ -58,8 +58,10 @@ changeTextValue = (text) => {
 }
 //将状态映射程属性
 const stateToProps = (state)=> {
+    const {changeTextReducer:{inputValue}} = state;
+
     return {
-        inputValue:state.inputValue
+        inputValue:inputValue
     }
 }
 // const mapDispatchToProps = dispatch => ({
