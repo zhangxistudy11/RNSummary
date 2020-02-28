@@ -29,7 +29,7 @@ class TopView extends Component {
     }
  
     render() {
-
+const {changeColorValue} = this.props;
         return (
     <View style={[Styles.container, { marginTop: 100 }]}>
         <View style={{ justifyContent: 'center', alignItems: 'center', flexDirection: 'row',height:100}}>
@@ -41,8 +41,9 @@ class TopView extends Component {
             />
              <TouchableOpacity onPress={()=>{
                  //tip:1 props调用action提供的方法
-        this.props.dispatch(addChangeColor(this.colorText))
+        // this.props.dispatch(addChangeColor(this.colorText))
                 //  this.clickTestChangeColor();
+                changeColorValue(this.colorText)
              }}>
                 <View style={{ 
                     width:100, height:30,justifyContent: 'center', alignItems: 'center', 
@@ -57,7 +58,14 @@ class TopView extends Component {
         );
     }
 }
+const mapDispatchToProps = ( dispatch,ownProps ) => {
+    return {
+        changeColorValue: (text) => {
+        dispatch(addChangeColor(text));
+      }
+    };
+  }
 //connect()方法来把展示组件和容器组件关联在一起
 //把展示组件连接到 Redux
 //使组件和Store连接起来,组件的props能拿到dispatch
-export default connect()(TopView)
+export default connect(null,mapDispatchToProps)(TopView)

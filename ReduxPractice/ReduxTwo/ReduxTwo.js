@@ -22,7 +22,7 @@ import {changeInput} from './actions'
     render() {
      //创建store传入reducers。
      //使用Provider组件包裹 Group组件, store作为属性传入Provider
-        const {inputValue} = this.props;
+        const {inputValue,changeTextValue} = this.props;
         return (
             <View style={[Styles.container, { marginTop: 100 ,paddingLeft:90}]}>
                 		<TextInput
@@ -34,8 +34,8 @@ import {changeInput} from './actions'
 							autoFocus={true}
 						
 							onChangeText={(text) => {
-                                this.props.dispatch(changeInput(text))
-
+                                // this.props.dispatch(changeInput(text))
+                                changeTextValue(text)
                                 // this.changeTextValue(text)
 							}}
 							/>
@@ -44,7 +44,7 @@ import {changeInput} from './actions'
             </View>
         );
     }
-  
+  /*
 changeTextValue = (text) => {
     // console.log(text)
     // const  action  = {
@@ -54,9 +54,9 @@ changeTextValue = (text) => {
     this.props.dispatch(changeInput(text))
     console.log('fffff')
 }
-   
+   */
 }
-//将状态映射程属性
+//将状态映射成属性
 const stateToProps = (state)=> {
     const {changeTextReducer:{inputValue}} = state;
 
@@ -64,9 +64,20 @@ const stateToProps = (state)=> {
         inputValue:inputValue
     }
 }
+/*
+mapDispatchToProps() 方法接收 dispatch() 方法，
+并返回期望注入到展示组件的 props 中的回调方法
+*/
+const mapDispatchToProps = ( dispatch,ownProps ) => {
+    return {
+        changeTextValue: (text) => {
+        dispatch(changeInput(text));
+      }
+    };
+  }
 // const mapDispatchToProps = dispatch => ({
 //     toggleTodo: id => dispatch(toggleTodo(id))
 // });
 
 
-export default  connect (stateToProps)(ReduxTwo)
+export default  connect (stateToProps,mapDispatchToProps)(ReduxTwo)
